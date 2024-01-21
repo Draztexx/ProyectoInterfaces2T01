@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "CrearTema";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link href="d:\proyectos\proyectointerfaces2t01\proyectointerfaces2t01\wwwroot\css\register.css" rel="stylesheet" />
+
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="panel panel-primary">
+				<div class="panel-body">
+					<form method="post" action="@Url.Action("CrearTema","MantenedorController1")" role="form">
+						<div class="form-group">
+							<h2>Nuevo Tema</h2>
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="signupName">Titulo</label>
+							<input type="text" maxlength="50" class="form-control" name="Titulo">
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="signupEmail">Realiza tu cuestion</label>
+							<input type="text" maxlength="50" class="form-control" name="Cuerpo">
+						</div>
+
+						<div class="form-group">
+							<button type="submit" class="btn btn-info btn-block">Crea el tema</button>
+						</div>
+					
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>
+

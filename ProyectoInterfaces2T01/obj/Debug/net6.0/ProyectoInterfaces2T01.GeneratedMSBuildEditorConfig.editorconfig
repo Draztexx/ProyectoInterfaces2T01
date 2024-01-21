@@ -9,41 +9,53 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProyectoInterfaces2T01
 build_property.RootNamespace = ProyectoInterfaces2T01
-build_property.ProjectDir = C:\Users\Alumno\Desktop\ProyectoInterfaces2T01\ProyectoInterfaces2T01\
+build_property.ProjectDir = D:\Proyectos\ProyectoInterfaces2T01\ProyectoInterfaces2T01\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Alumno\Desktop\ProyectoInterfaces2T01\ProyectoInterfaces2T01
+build_property.MSBuildProjectDirectory = D:\Proyectos\ProyectoInterfaces2T01\ProyectoInterfaces2T01
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Alumno/Desktop/ProyectoInterfaces2T01/ProyectoInterfaces2T01/Views/Home/Index.cshtml]
+[D:/Proyectos/ProyectoInterfaces2T01/ProyectoInterfaces2T01/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Desktop/ProyectoInterfaces2T01/ProyectoInterfaces2T01/Views/Home/Privacy.cshtml]
+[D:/Proyectos/ProyectoInterfaces2T01/ProyectoInterfaces2T01/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Desktop/ProyectoInterfaces2T01/ProyectoInterfaces2T01/Views/MantenedorController1/Crear.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuZWRvckNvbnRyb2xsZXIxXENyZWFyLmNzaHRtbA==
+[D:/Proyectos/ProyectoInterfaces2T01/ProyectoInterfaces2T01/Views/MantenedorController1/CrearTema.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuZWRvckNvbnRyb2xsZXIxXENyZWFyVGVtYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Desktop/ProyectoInterfaces2T01/ProyectoInterfaces2T01/Views/Shared/Error.cshtml]
+[D:/Proyectos/ProyectoInterfaces2T01/ProyectoInterfaces2T01/Views/MantenedorController1/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuZWRvckNvbnRyb2xsZXIxXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Proyectos/ProyectoInterfaces2T01/ProyectoInterfaces2T01/Views/MantenedorController1/Registrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuZWRvckNvbnRyb2xsZXIxXFJlZ2lzdHJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Proyectos/ProyectoInterfaces2T01/ProyectoInterfaces2T01/Views/MantenedorController1/Temas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuZWRvckNvbnRyb2xsZXIxXFRlbWFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Proyectos/ProyectoInterfaces2T01/ProyectoInterfaces2T01/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Desktop/ProyectoInterfaces2T01/ProyectoInterfaces2T01/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Proyectos/ProyectoInterfaces2T01/ProyectoInterfaces2T01/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Desktop/ProyectoInterfaces2T01/ProyectoInterfaces2T01/Views/_ViewImports.cshtml]
+[D:/Proyectos/ProyectoInterfaces2T01/ProyectoInterfaces2T01/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Desktop/ProyectoInterfaces2T01/ProyectoInterfaces2T01/Views/_ViewStart.cshtml]
+[D:/Proyectos/ProyectoInterfaces2T01/ProyectoInterfaces2T01/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alumno/Desktop/ProyectoInterfaces2T01/ProyectoInterfaces2T01/Views/Shared/_Layout.cshtml]
+[D:/Proyectos/ProyectoInterfaces2T01/ProyectoInterfaces2T01/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-hkb1szwl7a

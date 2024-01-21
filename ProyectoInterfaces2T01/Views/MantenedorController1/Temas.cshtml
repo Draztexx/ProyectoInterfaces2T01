@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "Temas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string nombreUsuario = ViewBag.NombreUsuario; 
+}
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <br/>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h4>Lista de Temas</h4>
+    </div>
+    <div class="panel-body">
+        <a class="btn btn-success" href="@Url.Action("Temas","Mantenedor")">Crear Nuevo</a>
+        <hr/>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Titulo</th>
+                    <th>Cuerpo</th>
+                    <th style="width: 300px"></th>
+                </tr>
+            </thead>
+        
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>@item.Titulo</td>
+                        <td>@item.Cuerpo</td>
+                        <td>
+                                @if (!string.IsNullOrEmpty(ViewBag.NombreUsuario) && ViewBag.NombreUsuario == item.Autor)
+                                {
+                                    <a class="btn btn-danger btn-sm" href="@Url.Action("","Mantenedor", new { idtema = item.IdTema })">Eliminar</a>
+                                }
+                    </tr>
+                
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+    </body>
+</html>
+
