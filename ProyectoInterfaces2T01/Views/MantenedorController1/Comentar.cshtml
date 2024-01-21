@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Comentar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="d:\proyectos\proyectointerfaces2t01\proyectointerfaces2t01\wwwroot\css\comentar.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container">
+        <div id="blog" class="row">
+
+            <div class="col-md-10">
+
+                <h1>@Model.Titulo</h1>
+
+                <article>
+                    <p>
+                        @Model.Cuerpo
+                    </p>
+                </article>
+
+                @if (Model != null && Model.Comentarios != null)
+                {
+                    @foreach (var item2 in Model.Comentarios)
+                    {
+
+                        <div class="card col-xs-10 col-md-11 mb-3 custom-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Usuario:  @item2.NombreUsu</h5>
+                                <p class="card-text">@item2.Cuerpo</p>
+                                <p class="card-text small text-muted">Publicado hoy</p>
+                            </div>
+                        </div>
+                    }                
+                }else
+                {
+                    <div><p>No hay Comentarios</p></div>
+                }
+            </div>
+
+            <div class="col-md-10">
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <form method="post" action="@Url.Action("Comentar", "MantenedorController1")" role="form">
+                            <div class="form-group">
+                                <h2>Create Comment</h2>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="signupName">Comment</label>
+                                <input type="text" maxlength="50" class="form-control" name="Cuerpo">
+                                <input type="hidden" name="Idtema" value="@Model.IdTema" />
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-info btn-block">Create your Comment</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-2 paddingTop20">
+                <!-- Barra lateral -->
+                <nav class="nav-sidebar">
+                    <ul class="nav">
+                        <li class="active"><a href="javascript:;"><span class="glyphicon glyphicon-star"></span> News</a></li>
+                        <li><a>Latest news</a></li>
+                        <li><a>Updates</a></li>
+                        <li><a href="@Url.Action("Temas","MantenedorController1")"><i class="glyphicon glyphicon-off">Volver</i></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="col-md-12 gap10"></div>
+        </div>
+    </div>
+
+</body>
+</html>

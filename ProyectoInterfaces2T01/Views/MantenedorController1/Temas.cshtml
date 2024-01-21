@@ -16,29 +16,32 @@
         <h4>Lista de Temas</h4>
     </div>
     <div class="panel-body">
-        <a class="btn btn-success" href="@Url.Action("Temas","Mantenedor")">Crear Nuevo</a>
+        <a class="btn btn-success" href="@Url.Action("CrearTema","MantenedorController1")">Crear Nuevo</a>
+            <a class="btn btn-danger" href="@Url.Action("CerrarSesion","MantenedorController1")">Cerrar Sesison</a>
         <hr/>
         <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Titulo</th>
-                    <th>Cuerpo</th>
-                    <th style="width: 300px"></th>
-                </tr>
-            </thead>
+            
         
             <tbody>
                 @foreach(var item in Model)
                 {
-                    <tr>
-                        <td>@item.Titulo</td>
-                        <td>@item.Cuerpo</td>
-                        <td>
-                                @if (!string.IsNullOrEmpty(ViewBag.NombreUsuario) && ViewBag.NombreUsuario == item.Autor)
-                                {
-                                    <a class="btn btn-danger btn-sm" href="@Url.Action("","Mantenedor", new { idtema = item.IdTema })">Eliminar</a>
-                                }
-                    </tr>
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4>@item.Titulo</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">@item.Cuerpo</p>
+                                </div>
+                                <div class="card-footer">
+                                    @if (!string.IsNullOrEmpty(ViewBag.NombreUsuario) && ViewBag.NombreUsuario == item.Autor)
+                                    {
+                                        <a class="btn btn-danger btn-sm" href="@Url.Action("Eliminar","MantenedorController1", new { IdTema = item.IdTema })">Eliminar</a>
+                                    }
+                                    <a class="btn btn-primary btn-sm" href="@Url.Action("Comentar", "MantenedorController1", new { IdTema = item.IdTema })">Comentar</a>
+                                </div>
+                            </div>
+                        </div>
                 
                 }
             </tbody>

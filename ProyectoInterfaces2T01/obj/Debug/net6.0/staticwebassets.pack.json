@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\ProyectoInterfaces2T01.bundle.scp.css"
     },
     {
+      "Id": "D:\\Proyectos\\ProyectoInterfaces2T01\\ProyectoInterfaces2T01\\wwwroot\\css\\Comentar.css",
+      "PackagePath": "staticwebassets\\css\\Comentar.css"
+    },
+    {
       "Id": "D:\\Proyectos\\ProyectoInterfaces2T01\\ProyectoInterfaces2T01\\wwwroot\\css\\Register.css",
       "PackagePath": "staticwebassets\\css\\Register.css"
     },

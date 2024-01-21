@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "I37OyIZCxrsTqLfic3dGzMA56f0lC8vOp8y9VJ6Pdto=",
+  "Hash": "quVJ1NN95iwbTRRJqRyowvy00pVn9nB8gKSrOMZtui4=",
   "Source": "ProyectoInterfaces2T01",
   "BasePath": "_content/ProyectoInterfaces2T01",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\Proyectos\\ProyectoInterfaces2T01\\ProyectoInterfaces2T01\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ProyectoInterfaces2T01.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\Proyectos\\ProyectoInterfaces2T01\\ProyectoInterfaces2T01\\wwwroot\\css\\Comentar.css",
+      "SourceId": "ProyectoInterfaces2T01",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Proyectos\\ProyectoInterfaces2T01\\ProyectoInterfaces2T01\\wwwroot\\",
+      "BasePath": "_content/ProyectoInterfaces2T01",
+      "RelativePath": "css/Comentar.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Comentar.css"
     },
     {
       "Identity": "D:\\Proyectos\\ProyectoInterfaces2T01\\ProyectoInterfaces2T01\\wwwroot\\css\\Register.css",

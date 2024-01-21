@@ -7,5 +7,10 @@
 		public string Cuerpo { get; set; }
 		public string Autor { get; set; }
 		public List<Comentario> Comentarios { get; set; }
-	}
+        public Tema()
+        {
+            // Inicializa la lista de comentarios en el constructor
+            Comentarios = new List<Comentario>();
+        }
+    }
 }

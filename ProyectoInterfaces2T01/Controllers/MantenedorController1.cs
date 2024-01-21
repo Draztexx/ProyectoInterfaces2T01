@@ -54,10 +54,7 @@ namespace ProyectoInterfaces2T01.Controllers
             return View();
         }
 
-        public IActionResult Eliminar()
-        {
-            return View();
-        }
+ 
 
         public IActionResult Login()
         {
@@ -67,6 +64,65 @@ namespace ProyectoInterfaces2T01.Controllers
         {
 			return View();
 		}
+
+		public IActionResult Eliminar(String Idtema)
+		{
+            FirebaseResponse response = cliente.Delete("Temas/" + Idtema);
+
+            if(response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+				return RedirectToAction("Temas", "MantenedorController1");
+			}else
+			{
+				ViewBag.ErrorMessage = "No se pudo eliminar el contacto. Inténtalo nuevamente.";
+				return RedirectToAction("Temas", "MantenedorController1");
+            }
+		}
+
+
+		public IActionResult Comentar(String Idtema)
+        {
+            FirebaseResponse response = cliente.Get("Temas/"+Idtema);
+            Tema tema = response.ResultAs<Tema>();
+            tema.IdTema = Idtema;
+
+            return View(tema);
+        }
+
+        [HttpPost]
+        public IActionResult Comentar(String Idtema,Comentario comentario) {
+            Usuario usuario = JsonConvert.DeserializeObject<Usuario>(HttpContext.Request.Cookies["Usuario"]);
+            string nombreUsuario = usuario?.Name;
+            string IdGenerado = Guid.NewGuid().ToString("N");
+            comentario.IdComentario = IdGenerado;
+            comentario.NombreUsu = nombreUsuario;
+
+            FirebaseResponse Response = cliente.Get("Temas/" + Idtema);
+            if (Response.StatusCode != System.Net.HttpStatusCode.OK)
+            {
+
+                return View();
+            }
+
+
+            Tema tema = Response.ResultAs<Tema>();
+            
+            if (tema.Comentarios == null)
+            {
+                tema.Comentarios = new List<Comentario>();
+            }
+            tema.Comentarios.Add(comentario);
+
+            FirebaseResponse res = cliente.Update("Temas/" + Idtema, tema);
+            if (res.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return RedirectToAction("Temas", "MantenedorController1");
+            }
+            else
+            {
+                return View();
+            }
+        }
 
 
 
@@ -79,12 +135,12 @@ namespace ProyectoInterfaces2T01.Controllers
 			string nombreUsuario = usuario?.Name;
             tema.Autor = nombreUsuario;
 			tema.Comentarios = new List<Comentario>();
-			SetResponse response = cliente.Set("Temas/" + IdGenerado, tema);
+            FirebaseResponse response = cliente.Update("Temas/" + IdGenerado, tema);
 
-			if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
 			{
 
-				return RedirectToAction("register");
+				return RedirectToAction("Temas", "MantenedorController1");
 			}
 			else
 			{
@@ -107,6 +163,7 @@ namespace ProyectoInterfaces2T01.Controllers
 
 
 				List<Tema> listaContacto = new List<Tema>();
+                
 				foreach (KeyValuePair<string, Tema> elemento in lista)
 				{
 					listaContacto.Add(new Tema
@@ -179,7 +236,7 @@ namespace ProyectoInterfaces2T01.Controllers
 
 					//string usuarioName = Request.Cookies["Usuario"];
 
-					return RedirectToAction("CrearTema");
+					return RedirectToAction("Temas", "MantenedorController1");
                 }
                 else
                 {
@@ -205,9 +262,6 @@ namespace ProyectoInterfaces2T01.Controllers
 
         public static string ConvertirSha256(string texto)
         {
-            //using System.Text;
-            //USAR LA REFERENCIA DE "System.Security.Cryptography"
-
             StringBuilder Sb = new StringBuilder();
             using (SHA256 hash = SHA256Managed.Create())
             {
@@ -221,24 +275,13 @@ namespace ProyectoInterfaces2T01.Controllers
             return Sb.ToString();
         }
 
-		public IActionResult verificar()
-		{
-			if (HttpContext.Session.GetString("Nombre") != null && HttpContext.Session.GetString("Email") != null)
-			{
-
-				return View();
-			}
-			else
-			{
-
-				return RedirectToAction("Login");
-			}
-		}
+		
 
 		public IActionResult CerrarSesion()
 		{
-			HttpContext.Session.Clear();
-			return RedirectToAction("Login");
+            Response.Cookies.Delete("Usuario");
+
+            return RedirectToAction("Login","MantenedorController1");
 		}
 
 
